@@ -1,15 +1,15 @@
-<h1>Positions</h1>
+<h1>Posições</h1>
     <?php echo $this->Html->link(
-        'Add Position',
+        'Nova Posição',
         array('controller'=>'positions','action'=>'add')
     ); ?>
 <table>
     <tr>
-        <th>Bay Number</th>
-        <th>Floor</th>
-        <th>Actions</th> 
-	    <th>Created</th>
-	    <th>Modified</th>
+        <th>Número da Baia</th>
+        <th>Andar</th>
+        <th>Ações</th> 
+	    <th>Criação</th>
+	    <th>Modificação</th>
     </tr>
 
 

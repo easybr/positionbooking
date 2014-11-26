@@ -1,9 +1,16 @@
 <?php
 class UsageMapsController extends AppController {
     public $helpers = array('Html', 'Form');
-    public function index() {
-        $this->set('usage_maps', $this->UsageMap->find('all'));
+    public function index($date = null) {
+        if ($date == null){
+            $this->set('date', date('Y-m-d'));
+            $this->set('usage_maps', $this->UsageMap->find('all'));
         }
+        else{
+            $this->set('date',$date);
+            $this->set('usage_maps', $this->UsageMap->find('all',array('conditions'=> array('UsageMap.usage_date' => $date))));
+        }                                        
+    }
 
     public function add(){
         $this->loadModel('Position');

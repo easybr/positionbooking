@@ -1,15 +1,15 @@
-<h1>UsagePolicys</h1>
+<h1>Políticas de Uso</h1>
     <?php echo $this->Html->link(
-        'Add UsagePolicy',
+        'Nova Política de Uso',
         array('controller'=>'usage_policies','action'=>'add')
     ); ?>
 <table>
     <tr>
-        <th>Policy Name</th>
-        <th>Home Offices per Week</th>
-        <th>Actions</th> 
-	    <th>Created</th>
-	    <th>Modified</th>
+        <th>Nome da Política</th>
+        <th>Home Offices por Semana</th>
+        <th>Ações</th> 
+	    <th>Criação</th>
+	    <th>Modificação</th>
     </tr>
 
 

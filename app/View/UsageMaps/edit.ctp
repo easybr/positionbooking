@@ -1,11 +1,11 @@
 
-<h1>Edit Usage Map</h1>
+<h1>Editar Mapa de Uso</h1>
 <?php
 echo $this->Form->create('UsageMap');
-echo $this->Form->input('position_id');
-echo $this->Form->input('worker_id');
-echo $this->Form->input('usage_date');
+echo $this->Form->input('position_id',array('label'=>'Posição'));
+echo $this->Form->input('worker_id',array('label'=>'Colaborador'));
+echo $this->Form->input('usage_date',array('label'=>'Data'));
 echo $this->Form->input('id', array('type' => 'hidden'));
-echo $this->Form->end('Save Usage Map');
+echo $this->Form->end('Salvar');
 ?>
 

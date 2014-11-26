@@ -1,16 +1,16 @@
-<h1>Workers</h1>
+<h1>Colaboradores</h1>
     <?php echo $this->Html->link(
-        'Add Worker',
+        'Novo Colaborador',
         array('controller'=>'workers','action'=>'add')
     ); ?>
 <table>
     <tr>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Policy</th> 
-	    <th>Actions</th>
-        <th>Created</th>
-	    <th>Modified</th>
+        <th>Chapa</th>
+        <th>Nome</th>
+        <th>Política</th> 
+	    <th>Ações</th>
+        <th>Criação</th>
+	    <th>Modificação</th>
     </tr>
 
 

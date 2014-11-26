@@ -1,16 +1,16 @@
-<h1>UsageMaps</h1>
+<h1>Mapas de Uso</h1>
     <?php echo $this->Html->link(
-        'Add UsageMaps',
+        'Novo Mapa de Uso',
         array('controller'=>'usage_maps','action'=>'add')
     ); ?>
 <table>
     <tr>
-        <th>Position</th>
-        <th>Worker</th>
-        <th>Date</th>
-        <th>Actions</th> 
-	    <th>Created</th>
-	    <th>Modified</th>
+        <th>Posição</th>
+        <th>Colaborador</th>
+        <th>Data</th>
+        <th>Ações</th> 
+	    <th>Criação</th>
+	    <th>Modificação</th>
     </tr>
 
 
@@ -39,3 +39,13 @@
     <?php endforeach; ?>
     <?php unset($usage_map); ?>
 </table>
+<?php 
+    echo $this->Html->link(
+           'Anterior', array('action' => 'index', date( "Y-m-d", strtotime( "$date -1 day" ) )));
+    echo " | ";
+    echo $this->Html->link(
+           'Todos', array('action' => 'index' ));
+    echo " | ";
+    echo $this->Html->link(
+           'Próximo', array('action' => 'index', date( "Y-m-d", strtotime( "$date +1 day" ) ))); 
+?>
