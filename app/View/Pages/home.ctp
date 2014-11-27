@@ -11,6 +11,12 @@ endif;
 
 App::uses('Debugger', 'Utility');
 ?>
+<?php echo '<br/>'.$this->Html->link("Posições",array('controller' => 'positions', 'action' => 'index'));?>
+<?php echo '<br/>'.$this->Html->link("Políticas de Uso",array('controller' => 'UsagePolicies', 'action' => 'index')); ?>
+<?php echo '<br/>'.$this->Html->link("Colaboradores",array('controller' => 'Workers', 'action' => 'index')); ?>
+<?php echo '<br/>'.$this->Html->link("Mapas de Uso",array('controller' => 'UsageMaps', 'action' => 'index')); ?>
+</br></br></br></br></br></br></br></br></br></br>
+
 <h2><?php echo __d('cake_dev', 'Release Notes for CakePHP %s.', Configure::version()); ?></h2>
 <p>
 	<?php echo $this->Html->link(__d('cake_dev', 'Read the changelog'), 'http://cakephp.org/changelogs/' . Configure::version()); ?>

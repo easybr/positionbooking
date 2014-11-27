@@ -1,10 +1,20 @@
 <?php
 class PositionsController extends AppController {
     public $helpers = array('Html', 'Form');
+
     public function index() {
         $this->set('positions', $this->Position->find('all'));
-        }
+    }
 
+    public function allocate($id=null){
+           
+        $allocationData = array('UsageMap'=>array(
+                                                'position_id'=>$id,
+                                                'worker_id'=>5,
+                                                'usage_date'=> date("Y-m-d")      
+             ) );  
+        $this->requestAction('/usageMaps/allocate',array('pass' => $allocationData));
+    }
     public function add(){
         if ($this->request->is('post')){
             $this->Position->create();

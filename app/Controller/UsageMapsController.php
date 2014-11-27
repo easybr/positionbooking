@@ -12,6 +12,15 @@ class UsageMapsController extends AppController {
         }                                        
     }
 
+
+    public function allocate($allocationData){
+        $this->UsageMap->create();
+        $this->UsageMap->set($allocationData);
+        if ($this->UsageMap->save()){
+            $this->Session->setFlash(__('UsageMap has been saved'));
+            return $this->redirect(array('action'=> 'index'));
+        }
+    }
     public function add(){
         $this->loadModel('Position');
         $positions=$this->Position->find('list', array('fields' => array('Position.id', 'Position.bay_number')));

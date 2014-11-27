@@ -28,6 +28,11 @@
                 'Delete', array('action' => 'delete', $position['Position']['id'])      
             );
         ?>
+        <?php
+            echo $this->Html->link(
+                'Alocar', array('action'=> 'allocate', $position['Position']['id'])
+            );
+        ?>
 
         </td>
 	<td><?php echo $position['Position']['created']; ?></td> 
